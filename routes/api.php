@@ -15,6 +15,7 @@ Route::prefix('v1/cuentas')->group(function () {
     Route::get('/{id}',[ CuentaController::class, 'getById']);
     Route::put('/{id}',[ CuentaController::class, 'update']);
     Route::delete('/{id}',[ CuentaController::class, 'delete']);
+    Route::post('/login', [CuentaController::class, 'login']);
 });
 
 Route::prefix('v1/mensajes')->group(function () {
